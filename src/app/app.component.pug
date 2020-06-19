@@ -1,0 +1,50 @@
+h1 Welcome {{ title1 }}
+p implementacion de pug en Angular
+
+div.container.app
+	div.row
+		div.col-sm-8
+			h1.text-center
+				{{title}}
+
+		div.col-sm-4
+			div.alert.alert-success.alert-dismissable(*ngIf="msg")
+				a.close((click)="closeAlert()")
+					 &times;
+				{{msg}}
+
+	div.row
+		div.col-sm-4
+			img(width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=")
+
+		div.col-sm-8
+			h2 Registrar Datos
+			form.form-horizontal
+				div.form-group
+					label.control-label.col-sm-2(for="name") Nombre:
+					div.col-sm-10
+						input.form-control#name(type="text" name="name" [(ngModel)]="model.name" placeholder="Enter a New Name")
+
+				div.form-group
+					label.control-label.col-sm-2(for="position") Posicion: 
+					div.col-sm-10
+						input.form-control#position(type="text" name="position" [(ngModel)]="model.position" placeholder="Enter a New Position")
+
+				div.form-group
+					label.control-label.col-sm-2(for="email") E-mail: 
+					div.col-sm-10
+						input.form-control#email(type="email" name="email" [(ngModel)]="model.email" placeholder="Enter a New email")
+
+				div.form-group
+					div.col-sm-10.col-sm-offset-2
+						button.btn.btn-success(type="submit" (click)="addEmployee()") Guardar
+
+
+
+
+
+
+
+
+
+
