@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title1 = 'Motor de Vistas Pug inmerso en Angular bajo la arquitectura Rest y MVC';
+  title1 = "Motor de Vistas Pug inmerso en Angular bajo la arquitectura Rest y MVC";
   title:string = 'Angular Crud';
+  parrafo= 'implementacion de pug en Angular';
+  nombre:string = 'Nombre: ';
+  apellido:string = 'Apellido: ';
+  email:string = 'E- Mail: ';
+
   msg:string = '';
 
     employees = [
@@ -57,6 +62,6 @@ export class AppComponent {
   closeAlert():void {
     this.msg = '';
   }
-  
+
 
 }
