@@ -18,9 +18,9 @@ export class AppComponent {
   msg:string = '';
 
     employees = [
-    {'name': 'Fazt', position: 'manager', email:'email@email.com'},
-    {'name': 'Juan', position: 'Designer', email:'email@email.com'},
-    {'name': 'Pedro', position: 'Programmer', email:'email@email.com'}
+    {'name': 'Fazt', cargo: 'manager', email:'email@email.com'},
+    {'name': 'Juan', cargo: 'Designer', email:'email@email.com'},
+    {'name': 'Pedro', cargo: 'Programmer', email:'email@email.com'}
   ];
 
   model:any = {};
@@ -45,7 +45,7 @@ export class AppComponent {
   editEmployee(i):void {
     this.hideUpdate = false;
     this.model2.name = this.employees[i].name;
-    this.model2.position = this.employees[i].position;
+    this.model2.cargo = this.employees[i].cargo;
     this.model2.email = this.employees[i].email;
     this.myValue = i;
   }

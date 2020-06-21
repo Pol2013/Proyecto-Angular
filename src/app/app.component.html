@@ -30,7 +30,7 @@
           </label>
           <div class="col-sm-10">
             <input  class="form-control" id="nombre" type="text"
-              name="nombre" [(ngModel)]="model.nombre"
+              name="name" [(ngModel)]="model.name"
               placeholder="Ingresa un nuevo nombre"
             >
           </div>
@@ -82,7 +82,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let employee of employees; let i = index">
-            <td>{{employee.nombre}}</td>
+            <td>{{employee.name}}</td>
             <td>{{employee.cargo}}</td>
             <td>{{employee.email}}</td>
             <td>
