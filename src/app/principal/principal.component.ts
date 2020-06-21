@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-principal',
-  templateUrl: './principal.component.html',
-  styleUrls: ['./principal.component.css']
+  templateUrl: './principal/principal.component.html',
+  styleUrls: ['./principal/principal.component.css']
 })
 export class PrincipalComponent implements OnInit {
 
@@ -68,6 +68,6 @@ export class PrincipalComponent implements OnInit {
   closeAlert():void {
     this.msg = '';
   }
-  
+
 
 }
