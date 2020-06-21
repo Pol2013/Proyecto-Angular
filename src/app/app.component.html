@@ -22,27 +22,27 @@
       <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=" />
     </div>
     <div class="col-sm-8">
-      <h2>Create Data:</h2>
+      <h2>Registrar Datos en la BD:</h2>
       <form class="form-horizontal">
         <div class="form-group">
-          <label for="name" class="control-label col-sm-2">
-            Name
+          <label for="nombre" class="control-label col-sm-2">
+            Nombre:
           </label>
           <div class="col-sm-10">
-            <input  class="form-control" id="name" type="text"
-              name="name" [(ngModel)]="model.name"
-              placeholder="Enter a New Name"
+            <input  class="form-control" id="nombre" type="text"
+              name="nombre" [(ngModel)]="model.nombre"
+              placeholder="Ingresa un nuevo nombre"
             >
           </div>
         </div>
         <div class="form-group">
-          <label for="position" class="control-label col-sm-2">
+          <label for="cargo" class="control-label col-sm-2">
             Position
           </label>
           <div class="col-sm-10">
-            <input  class="form-control" id="position" type="text"
-              name="position" [(ngModel)]="model.position"
-              placeholder="Enter a New Position"
+            <input  class="form-control" id="cargo" type="text"
+              name="cargo" [(ngModel)]="model.cargo"
+              placeholder="Ingresa un nuevo cargo"
             >
           </div>
         </div>
@@ -53,7 +53,7 @@
           <div class="col-sm-10">
             <input type="text" class="form-control" id="email"
               name="email" [(ngModel)]="model.email"
-              placeholder="Enter a New Email"
+              placeholder="Ingresa un Correo electronico"
             >
           </div>
         </div>
@@ -70,20 +70,20 @@
   </div>
   <div class="row">
     <div class="col-sm-8">
-      <h2>Read Data: </h2>
+      <h2>Capturar registros de la BD: </h2>
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Position</th>
+            <th>Nombre</th>
+            <th>Cargo</th>
             <th>Email</th>
-            <th>Actions</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let employee of employees; let i = index">
-            <td>{{employee.name}}</td>
-            <td>{{employee.position}}</td>
+            <td>{{employee.nombre}}</td>
+            <td>{{employee.cargo}}</td>
             <td>{{employee.email}}</td>
             <td>
               <a (click)="editEmployee(i)" class="btn btn-success">
@@ -99,27 +99,27 @@
       </table>
     </div>
     <div class="col-sm-4" [hidden]="hideUpdate">
-      <h2>Update Data:</h2>
+      <h2>Actualizar Datos:</h2>
       <form class="form-horizontal">
         <div class="form-group">
-          <label for="name" class="control-label col-sm-2">
-            Name
+          <label for="nombre" class="control-label col-sm-2">
+            Nombre:
           </label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="name"
-              name="name" [(ngModel)]="model2.name"
-              placeholder="Enter a New Name"
+            <input type="text" class="form-control" id="nombre"
+              name="nombre" [(ngModel)]="model2.nombre"
+              placeholder="Ingresa un nuevo nombre"
             >
           </div>
         </div>
         <div class="form-group">
-          <label for="position" class="control-label col-sm-2">
-            Position
+          <label for="cargo" class="control-label col-sm-2">
+           Cargo:
           </label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="name"
-              name="position" [(ngModel)]="model2.position"
-              placeholder="Enter a New Position"
+            <input type="text" class="form-control" id="cargo"
+              name="cargo" [(ngModel)]="model2.cargo"
+              placeholder="Ingresa un nuevo Cargo"
             >
           </div>
         </div>
@@ -130,7 +130,7 @@
           <div class="col-sm-10">
             <input type="text" class="form-control" id="email"
               name="email" [(ngModel)]="model2.email"
-              placeholder="Enter a New Email"
+              placeholder="Imgresa un nuevo correo electronico"
             >
           </div>
         </div>
